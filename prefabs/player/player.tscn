@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bggk0wo20or7e"]
+[gd_scene load_steps=5 format=3 uid="uid://bggk0wo20or7e"]
 
+[ext_resource type="Script" uid="uid://bkn42iac5m1hr" path="res://prefabs/player/Player.cs" id="1_rdx4y"]
 [ext_resource type="Script" uid="uid://b2mblm63k5why" path="res://addons/2d_shapes/shapes/Ellipse.gd" id="1_sxsrd"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_sxsrd"]
@@ -10,6 +11,7 @@ radius = 15.0
 
 [node name="Player" type="RigidBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_sxsrd")
+script = ExtResource("1_rdx4y")
 
 [node name="Ellipse" type="Node2D" parent="."]
 script = ExtResource("1_sxsrd")
