@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://c6kj8iapeg4w7"]
+
+[ext_resource type="PackedScene" uid="uid://rvyu84sm7168" path="res://prefabs/peg/peg_row.tscn" id="1_o0fae"]
+[ext_resource type="PackedScene" uid="uid://be1yd1edhayev" path="res://prefabs/wall_piece/wall.tscn" id="2_lxrb4"]
+[ext_resource type="PackedScene" uid="uid://b3t4an8um46mk" path="res://prefabs/Base/floor.tscn" id="3_al8p8"]
+[ext_resource type="PackedScene" uid="uid://j8lnurex41uq" path="res://prefabs/Base/wall_base.tscn" id="4_r2c0j"]
+[ext_resource type="PackedScene" uid="uid://bggk0wo20or7e" path="res://prefabs/player/player.tscn" id="5_o0fae"]
+
+[node name="PlinkoLevel" type="Node2D"]
+
+[node name="Pegs" type="Node2D" parent="."]
+
+[node name="PegRow" parent="Pegs" instance=ExtResource("1_o0fae")]
+position = Vector2(64, 256)
+
+[node name="PegRow2" parent="Pegs" instance=ExtResource("1_o0fae")]
+position = Vector2(96, 320)
+
+[node name="PegRow3" parent="Pegs" instance=ExtResource("1_o0fae")]
+position = Vector2(64, 384)
+
+[node name="PegRow4" parent="Pegs" instance=ExtResource("1_o0fae")]
+position = Vector2(96, 448)
+
+[node name="PegRow5" parent="Pegs" instance=ExtResource("1_o0fae")]
+position = Vector2(64, 512)
+
+[node name="PegRow6" parent="Pegs" instance=ExtResource("1_o0fae")]
+position = Vector2(96, 576)
+
+[node name="PegRow7" parent="Pegs" instance=ExtResource("1_o0fae")]
+position = Vector2(64, 640)
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="Wall" parent="Walls" instance=ExtResource("2_lxrb4")]
+position = Vector2(0, 256)
+
+[node name="Wall2" parent="Walls" instance=ExtResource("2_lxrb4")]
+position = Vector2(624, 256)
+
+[node name="Base" type="Node2D" parent="."]
+
+[node name="Floor" parent="Base" instance=ExtResource("3_al8p8")]
+position = Vector2(312, 840)
+
+[node name="WallBase" parent="Base" instance=ExtResource("4_r2c0j")]
+position = Vector2(7, 760)
+
+[node name="WallBase2" parent="Base" instance=ExtResource("4_r2c0j")]
+position = Vector2(617, 760)
+
+[node name="Player" parent="." instance=ExtResource("5_o0fae")]
+position = Vector2(272, 136)

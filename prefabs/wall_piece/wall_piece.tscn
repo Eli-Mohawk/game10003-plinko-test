@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://jr5vadbi2wgg"]
+
+[ext_resource type="Script" uid="uid://6vabe8q36uyw" path="res://addons/2d_shapes/shapes/Rectangle.gd" id="1_hka0w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hka0w"]
+size = Vector2(100, 100)
+
+[node name="WallPiece" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hka0w")
+
+[node name="Rectangle" type="Node2D" parent="CollisionShape2D"]
+script = ExtResource("1_hka0w")
+corner_radius = 0.0
+metadata/_custom_type_script = "uid://6vabe8q36uyw"

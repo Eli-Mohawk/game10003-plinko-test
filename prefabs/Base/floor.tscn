@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3t4an8um46mk"]
+
+[ext_resource type="Script" uid="uid://6vabe8q36uyw" path="res://addons/2d_shapes/shapes/Rectangle.gd" id="1_ejcwq"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ejcwq"]
+bounce = 0.36
+absorbent = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wehri"]
+size = Vector2(630, 20)
+
+[node name="Floor" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_ejcwq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wehri")
+
+[node name="Rectangle" type="Node2D" parent="."]
+script = ExtResource("1_ejcwq")
+size = Vector2(630, 20)
+corner_radius = 0.0
+metadata/_custom_type_script = "uid://6vabe8q36uyw"
